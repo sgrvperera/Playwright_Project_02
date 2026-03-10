@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: Playwright Cross-Browser Tests
 
 on:
   push:
@@ -9,6 +9,10 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, firefox, webkit]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,35 +28,36 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests
-        run: npx playwright test --reporter=list
+      - name: Run Playwright tests - ${{ matrix.browser }}
+        # run tests for a single browser using matrix variable
+        run: npx playwright test --project=${{ matrix.browser }} --reporter=list
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
 
-      - name: Upload Playwright HTML report
+      - name: Upload HTML report (browser)
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report
+          name: playwright-report-${{ matrix.browser }}
           path: playwright-report/
 
-      - name: Upload test-results artifacts
+      - name: Upload test-results artifacts (browser)
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-results
+          name: test-results-${{ matrix.browser }}
           path: test-results/
 
-      - name: Upload videos
+      - name: Upload videos (browser)
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: videos
+          name: videos-${{ matrix.browser }}
           path: test-results/**/*.webm
 
-      - name: Upload screenshots
+      - name: Upload screenshots (browser)
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: screenshots
+          name: screenshots-${{ matrix.browser }}
           path: test-results/**/*.png
