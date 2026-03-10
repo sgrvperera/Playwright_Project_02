@@ -12,8 +12,8 @@ const config: PlaywrightTestConfig = {
     ['html', { outputFolder: 'playwright-report', open: 'never' }]
   ],
   use: {
-    baseURL: process.env.BASE_URL ?? 'https://demowebshop.tricentis.com',
-    headless: true,
+   baseURL: process.env.BASE_URL || 'https://demowebshop.tricentis.com',
+  headless: true,
     viewport: { width: 1280, height: 720 },
     actionTimeout: 10_000,
     trace: 'on-first-retry',

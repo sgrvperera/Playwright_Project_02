@@ -15,7 +15,9 @@ export const test = baseTest.extend<{ user: TestUser }>({
     const user = createTestUser();
 
     const register = new RegisterPage(page);
-    await page.goto(baseURL ?? '/');
+    // tests/fixtures/playwright-fixtures.ts (snippet)
+const safeBase = (baseURL && baseURL.trim()) || process.env.BASE_URL || 'https://demowebshop.tricentis.com';
+await page.goto(safeBase);
     await register.goto();
     await register.register(user.firstName, user.lastName, user.email, user.password);
     await register.expectSuccess();
