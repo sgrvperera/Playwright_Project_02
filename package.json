@@ -1,0 +1,16 @@
+{
+  "name": "playwright-e2e-practice",
+  "version": "1.0.0",
+  "description": "Playwright E2E practice repo for Demo Web Shop",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "show-report": "npx playwright show-report",
+    "install-browsers": "npx playwright install"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.36.0",
+    "dotenv": "^16.3.1",
+    "typescript": "^5.4.0"
+  }
+}
