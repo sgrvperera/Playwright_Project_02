@@ -13,7 +13,7 @@ const config: PlaywrightTestConfig = {
   ],
   use: {
    baseURL: process.env.BASE_URL || 'https://demowebshop.tricentis.com',
-  headless: true,
+   headless: true,
     viewport: { width: 1280, height: 720 },
     actionTimeout: 10_000,
     trace: 'on-first-retry',
@@ -22,7 +22,10 @@ const config: PlaywrightTestConfig = {
     
   },
   projects: [
-    { name: 'chromium', use: { browserName: 'chromium' } }
+    { name: 'chromium', use: { browserName: 'chromium' } },
+    { name: 'firefox', use: { browserName: 'firefox' } },
+    {name: 'webkit', use: { browserName: 'webkit' } }
+
   ]
 };
 
