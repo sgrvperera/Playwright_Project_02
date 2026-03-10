@@ -8,3 +8,7 @@ coverage/
 dist/
 .idea/
 .vscode/
+storageState.json
+test-user.json
+"storageState.json" 
+"test-user.json" 

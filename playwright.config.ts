@@ -11,8 +11,10 @@ const config: PlaywrightTestConfig = {
     ['list'],
     ['html', { outputFolder: 'playwright-report', open: 'never' }]
   ],
+   globalSetup: require.resolve('./global-setup'),
   use: {
-   baseURL: process.env.BASE_URL || 'https://demowebshop.tricentis.com',
+   storageState: process.env.STORAGE_STATE || 'storageState.json',
+    baseURL: process.env.BASE_URL || 'https://demowebshop.tricentis.com',
    headless: true,
     viewport: { width: 1280, height: 720 },
     actionTimeout: 10_000,
