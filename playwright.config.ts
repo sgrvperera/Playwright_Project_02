@@ -26,6 +26,9 @@ const config: PlaywrightTestConfig = {
   },
   projects: [
     { name: 'chromium', use: { browserName: 'chromium' } },
+    //{ name: 'firefox', use: { browserName: 'firefox' } },
+    //{ name: 'chromium-headless', use: { browserName: 'chromium', headless: true } },
+    //{ name: 'firefox-headless', use: { browserName: 'firefox', headless: true } },
     
 
   ]
