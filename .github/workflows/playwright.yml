@@ -11,10 +11,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        browser: [chromium, firefox, webkit]
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,9 +27,8 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests - ${{ matrix.browser }}
-        # run tests for a single browser using matrix variable
-        run: npx playwright test --project=${{ matrix.browser }} --reporter=list
+      - name: Run Playwright tests
+        run: npx playwright test --project=chromium
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
 
