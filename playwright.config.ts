@@ -9,7 +9,8 @@ const config: PlaywrightTestConfig = {
   workers: process.env.CI ? 2 : undefined,
   reporter: [
     ['list'],
-    ['html', { outputFolder: 'playwright-report', open: 'never' }]
+    ['html', { outputFolder: 'playwright-report', open: 'never' }],
+    ['allure-playwright', { outputFolder: 'allure-results' }],
   ],
    globalSetup: require.resolve('./global-setup'),
   use: {
@@ -18,15 +19,14 @@ const config: PlaywrightTestConfig = {
    headless: true,
     viewport: { width: 1280, height: 720 },
     actionTimeout: 10_000,
-    trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    trace: 'on',
+    screenshot: 'on',
+    video: 'on',
     
   },
   projects: [
     { name: 'chromium', use: { browserName: 'chromium' } },
-    { name: 'firefox', use: { browserName: 'firefox' } },
-    {name: 'webkit', use: { browserName: 'webkit' } }
+    
 
   ]
 };

@@ -6,10 +6,15 @@
     "test": "npx playwright test",
     "test:headed": "npx playwright test --headed",
     "show-report": "npx playwright show-report",
-    "install-browsers": "npx playwright install"
+    "install-browsers": "npx playwright install",
+    "allure:generate": "allure generate allure-results -o allure-report --clean",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results"
   },
   "devDependencies": {
     "@playwright/test": "^1.36.0",
+    "allure-commandline": "^2.38.1",
+    "allure-playwright": "^3.6.0",
     "dotenv": "^16.3.1",
     "typescript": "^5.4.0"
   }
