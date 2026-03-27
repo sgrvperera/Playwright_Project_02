@@ -1,0 +1,224 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - link "Tricentis Demo Web Shop" [ref=e6]:
+        - /url: /
+        - img "Tricentis Demo Web Shop" [ref=e7]
+      - list [ref=e10]:
+        - listitem [ref=e11]:
+          - link "pw+1774591626288@example.com" [ref=e12]:
+            - /url: /customer/info
+        - listitem [ref=e13]:
+          - link "Log out" [ref=e14]:
+            - /url: /logout
+        - listitem [ref=e15]:
+          - link "Shopping cart (1)" [ref=e16]:
+            - /url: /cart
+            - generic [ref=e17]: Shopping cart
+            - generic [ref=e18]: (1)
+        - listitem [ref=e19]:
+          - link "Wishlist (0)" [ref=e20]:
+            - /url: /wishlist
+            - generic [ref=e21]: Wishlist
+            - generic [ref=e22]: (0)
+      - generic [ref=e24]:
+        - status [ref=e25]
+        - textbox [ref=e26]: Search store
+        - button "Search" [ref=e27] [cursor=pointer]
+    - list [ref=e29]:
+      - listitem [ref=e30]:
+        - link "Books" [ref=e31]:
+          - /url: /books
+      - listitem [ref=e32]:
+        - link "Computers" [ref=e33]:
+          - /url: /computers
+      - listitem [ref=e34]:
+        - link "Electronics" [ref=e35]:
+          - /url: /electronics
+      - listitem [ref=e36]:
+        - link "Apparel & Shoes" [ref=e37]:
+          - /url: /apparel-shoes
+      - listitem [ref=e38]:
+        - link "Digital downloads" [ref=e39]:
+          - /url: /digital-downloads
+      - listitem [ref=e40]:
+        - link "Jewelry" [ref=e41]:
+          - /url: /jewelry
+      - listitem [ref=e42]:
+        - link "Gift Cards" [ref=e43]:
+          - /url: /gift-cards
+    - generic:
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - strong [ref=e47]: Categories
+          - list [ref=e49]:
+            - listitem [ref=e50]:
+              - link "Books" [ref=e51]:
+                - /url: /books
+            - listitem [ref=e52]:
+              - link "Computers" [ref=e53]:
+                - /url: /computers
+            - listitem [ref=e54]:
+              - link "Electronics" [ref=e55]:
+                - /url: /electronics
+            - listitem [ref=e56]:
+              - link "Apparel & Shoes" [ref=e57]:
+                - /url: /apparel-shoes
+            - listitem [ref=e58]:
+              - link "Digital downloads" [ref=e59]:
+                - /url: /digital-downloads
+            - listitem [ref=e60]:
+              - link "Jewelry" [ref=e61]:
+                - /url: /jewelry
+            - listitem [ref=e62]:
+              - link "Gift Cards" [ref=e63]:
+                - /url: /gift-cards
+        - generic [ref=e64]:
+          - strong [ref=e66]: Manufacturers
+          - list [ref=e68]:
+            - listitem [ref=e69]:
+              - link "Tricentis" [ref=e70]:
+                - /url: /tricentis
+        - generic [ref=e71]:
+          - strong [ref=e73]: Newsletter
+          - generic [ref=e75]:
+            - text: "Sign up for our newsletter:"
+            - textbox [ref=e77]
+            - button "Subscribe" [ref=e79] [cursor=pointer]
+      - generic [ref=e81]:
+        - heading "Search" [level=1] [ref=e83]
+        - generic [ref=e84]:
+          - generic [ref=e86]:
+            - generic [ref=e87]:
+              - generic [ref=e88]:
+                - generic [ref=e89]: "Search keyword:"
+                - textbox "Search keyword:" [ref=e90]: book
+              - generic [ref=e91]:
+                - checkbox "Advanced search" [ref=e92]
+                - generic [ref=e93]: Advanced search
+            - button "Search" [ref=e95] [cursor=pointer]
+          - generic [ref=e96]:
+            - generic [ref=e97]:
+              - text: View as
+              - combobox [ref=e98]:
+                - option "Grid" [selected]
+                - option "List"
+            - generic [ref=e99]:
+              - text: Sort by
+              - combobox [ref=e100]:
+                - option "Position" [selected]
+                - 'option "Name: A to Z"'
+                - 'option "Name: Z to A"'
+                - 'option "Price: Low to High"'
+                - 'option "Price: High to Low"'
+                - option "Created on"
+            - generic [ref=e101]:
+              - text: Display
+              - combobox [ref=e102]:
+                - option "4"
+                - option "8" [selected]
+                - option "12"
+              - text: per page
+          - generic [ref=e106]:
+            - link "Picture of Health Book" [ref=e108]:
+              - /url: /health
+              - img "Picture of Health Book" [ref=e109]
+            - generic [ref=e110]:
+              - heading "Health Book" [level=2] [ref=e111]:
+                - link "Health Book" [ref=e112]:
+                  - /url: /health
+              - generic "491 review(s)" [ref=e113]
+              - generic [ref=e116]:
+                - generic [ref=e117]:
+                  - generic [ref=e118]: "27.00"
+                  - generic [ref=e119]: "10.00"
+                - button "Add to cart" [ref=e121] [cursor=pointer]
+  - generic [ref=e122]:
+    - generic [ref=e123]:
+      - generic [ref=e124]:
+        - heading "Information" [level=3] [ref=e125]
+        - list [ref=e126]:
+          - listitem [ref=e127]:
+            - link "Sitemap" [ref=e128]:
+              - /url: /sitemap
+          - listitem [ref=e129]:
+            - link "Shipping & Returns" [ref=e130]:
+              - /url: /shipping-returns
+          - listitem [ref=e131]:
+            - link "Privacy Notice" [ref=e132]:
+              - /url: /privacy-policy
+          - listitem [ref=e133]:
+            - link "Conditions of Use" [ref=e134]:
+              - /url: /conditions-of-use
+          - listitem [ref=e135]:
+            - link "About us" [ref=e136]:
+              - /url: /about-us
+          - listitem [ref=e137]:
+            - link "Contact us" [ref=e138]:
+              - /url: /contactus
+      - generic [ref=e139]:
+        - heading "Customer service" [level=3] [ref=e140]
+        - list [ref=e141]:
+          - listitem [ref=e142]:
+            - link "Search" [ref=e143]:
+              - /url: /search
+          - listitem [ref=e144]:
+            - link "News" [ref=e145]:
+              - /url: /news
+          - listitem [ref=e146]:
+            - link "Blog" [ref=e147]:
+              - /url: /blog
+          - listitem [ref=e148]:
+            - link "Recently viewed products" [ref=e149]:
+              - /url: /recentlyviewedproducts
+          - listitem [ref=e150]:
+            - link "Compare products list" [ref=e151]:
+              - /url: /compareproducts
+          - listitem [ref=e152]:
+            - link "New products" [ref=e153]:
+              - /url: /newproducts
+      - generic [ref=e154]:
+        - heading "My account" [level=3] [ref=e155]
+        - list [ref=e156]:
+          - listitem [ref=e157]:
+            - link "My account" [ref=e158]:
+              - /url: /customer/info
+          - listitem [ref=e159]:
+            - link "Orders" [ref=e160]:
+              - /url: /customer/orders
+          - listitem [ref=e161]:
+            - link "Addresses" [ref=e162]:
+              - /url: /customer/addresses
+          - listitem [ref=e163]:
+            - link "Shopping cart" [ref=e164]:
+              - /url: /cart
+          - listitem [ref=e165]:
+            - link "Wishlist" [ref=e166]:
+              - /url: /wishlist
+      - generic [ref=e167]:
+        - heading "Follow us" [level=3] [ref=e168]
+        - list [ref=e169]:
+          - listitem [ref=e170]:
+            - link "Facebook" [ref=e171]:
+              - /url: http://www.facebook.com/nopCommerce
+          - listitem [ref=e172]:
+            - link "Twitter" [ref=e173]:
+              - /url: https://twitter.com/nopCommerce
+          - listitem [ref=e174]:
+            - link "RSS" [ref=e175]:
+              - /url: /news/rss/1
+          - listitem [ref=e176]:
+            - link "YouTube" [ref=e177]:
+              - /url: http://www.youtube.com/user/nopCommerce
+          - listitem [ref=e178]:
+            - link "Google+" [ref=e179]:
+              - /url: https://plus.google.com/+nopcommerce
+    - generic [ref=e180]:
+      - text: Powered by
+      - link "nopCommerce" [ref=e181]:
+        - /url: http://www.nopcommerce.com/
+    - generic [ref=e182]: Copyright © 2026 Tricentis Demo Web Shop. All rights reserved.
+```
